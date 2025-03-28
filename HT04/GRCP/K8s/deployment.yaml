@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: so1-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: so1
+  template:
+    metadata:
+      labels:
+        app: so1
+    spec:
+      containers:
+      - name: so1-container
+        image: gcr.io/so1-tarea4-2025/so1-app
+        ports:
+        - containerPort: 4000
