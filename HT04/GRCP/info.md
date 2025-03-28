@@ -7,7 +7,7 @@ Kubernetes Engine API
 Container Registry API
 Compute Engine API
 
-_Instalar herramientas_
+_Instalar herramientas GCloud en Ubuntu_
 
 ```
 gcloud init
