@@ -19,6 +19,7 @@ echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.clou
   sudo tee /etc/apt/sources.list.d/google-cloud-sdk.list
 
 sudo apt update
+gcloud version
 sudo apt install google-cloud-sdk -y
 ```
 
@@ -28,13 +29,11 @@ _Instalar herramientas GCloud en Ubuntu_
 
 ```bash
 gcloud init
-gcloud auth login
-gcloud config set project so1-tarea4-2025-455121
 gcloud components install kubectl
 ```
 
 ---
-
+  
 _Crear cluster Kubernetes_
 
 ```bash
@@ -91,6 +90,12 @@ kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
 ```
+
+cargar todos los yamls sin estar en la carpeta k8s
+```
+kubectl apply -f ~/Escritorio/SO1_1S2025/HT04/GRCP/K8s/
+```
+
 
 ---
 
