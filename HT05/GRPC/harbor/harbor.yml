@@ -1,0 +1,38 @@
+hostname:   # ← Cambia esto por la IP de tu servidor
+
+http:
+  port: 80
+
+# Si quieres habilitar HTTPS (opcional, requiere certificados)
+# https:
+#   port: 443
+#   certificate: /your/certificate/path
+#   private_key: /your/private/key/path
+
+# Admin user
+harbor_admin_password: Harbor12345
+
+database:
+  password: root123
+
+data_volume: /data
+
+clair:
+  updaters_interval: 12
+
+jobservice:
+  max_job_workers: 10
+
+notification:
+  webhook_job_max_retry: 10
+
+chart:
+  absolute_url: disabled
+
+log:
+  level: info
+  rotate_count: 50
+  rotate_size: 200M
+  location: /var/log/harbor
+
+_version: 2.12.0
