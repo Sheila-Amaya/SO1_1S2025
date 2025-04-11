@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package saludo;
+option go_package = "./proto";
 
 service SaludoService {
   rpc Saludar (SaludoRequest) returns (SaludoResponse);

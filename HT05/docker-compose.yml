@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    container_name: grpc-server
+    ports:
+      - "50051:50051"
+
+  client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    container_name: grpc-client
+    depends_on:
+      - server
