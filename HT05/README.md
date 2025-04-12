@@ -224,11 +224,10 @@ docker tag grpc-server MI_IP.nip.io/ht05-grpc/grpc-server
 docker push MI_IP.nip.io/ht05-grpc/grpc-client
 docker push MI_IP.nip.io/ht05-grpc/grpc-server
 
-docker pull MI_IP.nip.io/ht05-grpc/grpc-client
-docker pull MI_IP.nip.io/ht05-grpc/grpc-server
 ```
 
 Verificar:
 ```bash
+# Lanza los contenedores definidos en docker-compose.yml
 docker compose up
 ```
