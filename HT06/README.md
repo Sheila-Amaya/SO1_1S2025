@@ -27,6 +27,8 @@ eval $(minikube docker-env)
 
 docker build -t kafka-consumer:latest ./src/kafka-consumer
 docker build -t rabbitmq-consumer:latest ./src/rabbitmq-consumer
+
+eval $(minikube docker-env -u)
 ```
 
 ---
