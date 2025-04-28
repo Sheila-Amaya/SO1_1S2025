@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq-consumer
+  template:
+    metadata:
+      labels:
+        app: rabbitmq-consumer
+    spec:
+      containers:
+      - name: rabbitmq-consumer
+        image: rabbitmq-consumer:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: RABBITMQ_URL
+          value: "amqp://user:dNuOvE9CxEyBsnmU@rabbitmq.default.svc.cluster.local:5672/"
+        - name: RABBITMQ_QUEUE
+          value: "message"           
+        - name: VALKEY_ADDR
+          value: "valkey.default.svc.cluster.local:6379"
